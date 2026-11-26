@@ -1,7 +1,6 @@
 import { StackNavigationProp, createStackNavigator } from '@react-navigation/stack';
-import { Slide01} from '../screns/Slide01';
+import { Slide01 } from '../screns/Slide01';
 import { Slide02 } from '../screns/Slide02';
-import { Slide03 } from '../screns/Slide03';
 import { MenuTabs } from './MenuBottomTab.navigation';
 import { MenuDrawer } from './MenuDrawer.navigation';
 
@@ -17,6 +16,10 @@ export type MenuStackTypes = {
     navigation: MenuScreenNavigation
 }
 
+type MenuStackProps = {
+    onVoltar?: () => void;
+}
+
 export function MenuStack(){
     const Stack = createStackNavigator<MenuStackParam>();
     return(
@@ -24,6 +27,7 @@ export function MenuStack(){
             animationEnabled: true,
             gestureEnabled: true
         }}>
+            
             <Stack.Screen name="Slide1" component={Slide01} />
             <Stack.Screen name="Slide2" component={Slide02} />
             <Stack.Screen name="Tab" component={MenuTabs} />

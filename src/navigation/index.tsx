@@ -1,13 +1,10 @@
-import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native'
-import { MenuStack } from './MenuStack.navigation';
-import { MenuTabs } from './MenuBottomTab.navigation'
-import { MenuDrawer } from './MenuDrawer.navigation';
+import { NavigationContainer } from '@react-navigation/native';
+import { Principal } from '../screns/Principal';
 
-export  function Navigation(){
-    return(
+export function Navigation() {
+    return (
         <NavigationContainer>
-            <MenuStack/>
+            <Principal />
         </NavigationContainer>
     );
 }
